@@ -159,6 +159,7 @@
       padding: 20px;
       border-radius: 8px;
       width: 400px;
+      max-width: 90%;
       box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
     }
     .cart-item {
@@ -246,8 +247,63 @@
 
     /* Mobile responsiveness */
     @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+      }
+
+      .search-bar {
+        width: 100%;
+      }
+
+      .product-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .cart-modal-content {
+        width: 90%;
+        padding: 10px;
+      }
+
       .checkout-container {
         padding: 15px;
+        width: 90%;
+      }
+
+      .payment-form input {
+        font-size: 14px;
+      }
+
+      .payment-form button {
+        font-size: 14px;
+        padding: 8px;
+      }
+
+      .offers-banner {
+        font-size: 18px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .product-card {
+        padding: 10px;
+      }
+
+      .product-name {
+        font-size: 16px;
+      }
+
+      .product-price {
+        font-size: 16px;
+      }
+
+      .cart-item button {
+        font-size: 16px;
+      }
+
+      .checkout-container h2 {
+        font-size: 20px;
       }
     }
   </style>
@@ -330,17 +386,17 @@
   </div>
 
   <!-- User Reviews Section -->
-  <h3>User Reviews</h3>
-  <div class="reviews">
+  <div class="user-reviews">
+    <h3>User Reviews</h3>
     <div class="review">
       <div class="stars">
         <span class="filled">&#9733;</span>
         <span class="filled">&#9733;</span>
         <span class="filled">&#9733;</span>
-        <span>&#9734;</span>
+        <span class="filled">&#9733;</span>
         <span>&#9734;</span>
       </div>
-      <p>"Great snack, highly recommend!"</p>
+      <p>"Great taste, will order again!"</p>
       <span>- User 1</span>
     </div>
 
@@ -350,7 +406,7 @@
         <span class="filled">&#9733;</span>
         <span class="filled">&#9733;</span>
         <span class="filled">&#9733;</span>
-        <span>&#9734;</span>
+        <span class="filled">&#9733;</span>
       </div>
       <p>"The flavor is amazing, will buy again!"</p>
       <span>- User 2</span>
